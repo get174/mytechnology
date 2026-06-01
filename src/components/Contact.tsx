@@ -37,16 +37,16 @@ export default function Contact() {
         >
           <div className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-6">
             <span className="text-orange-400 text-sm font-medium tracking-wider">
-              NOUS CONTACTER
+              CONTACTEZ-NOUS
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Prêt à Commencer ?
+              Parlons de votre projet
             </span>
           </h2>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Transformons votre vision en réalité. Contactez-nous dès aujourd'hui.
+            Décrivez votre projet. Nous répondons sous 24h avec une estimation.
           </p>
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="name"
-                placeholder="Votre Nom"
+                placeholder="Votre nom"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -117,7 +117,7 @@ export default function Contact() {
               <input
                 type="email"
                 name="email"
-                placeholder="Votre Email"
+                placeholder="votre@email.com"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -128,7 +128,7 @@ export default function Contact() {
             <div>
               <textarea
                 name="message"
-                placeholder="Votre Message"
+                placeholder="Décrivez votre projet (type, fonctionnalités, budget approx.)"
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
@@ -145,7 +145,7 @@ export default function Contact() {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:scale-110 transition-transform duration-300" />
               <div className="relative flex items-center justify-center gap-2">
-                Envoyer via WhatsApp
+                Envoyer sur WhatsApp
                 <Send className="w-5 h-5" />
               </div>
             </motion.button>

@@ -94,16 +94,16 @@ export default function Projects() {
         >
           <div className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-6">
             <span className="text-orange-400 text-sm font-medium tracking-wider">
-              NOS PROJETS
+              PORTFOLIO
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Nos Réalisations
+              Projets qui marchent
             </span>
           </h2>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Des projets innovants qui transforment les idées en réalité
+            Chaque projet a un objectif business. Voici les résultats que nous avons livrés.
           </p>
         </motion.div>
 

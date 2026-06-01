@@ -16,8 +16,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-8"
           >
-            <span className="text-orange-400 text-sm font-medium tracking-wider">
-              BIENVENUE À MYTECHNOLOGY
+            <span className="text-orange-400 text-sm font-medium tracking-wider uppercase">
+              My Technology — Kinshasa, RDC
             </span>
           </motion.div>
 
@@ -27,10 +27,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold leading-tight mb-6"
           >
-            Nous Construisons l'Avenir
+            Logiciels qui
             <br />
             <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
-              de la Technologie
+              génèrent des revenus
             </span>
           </motion.h1>
 
@@ -40,7 +40,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-gray-300 text-xl leading-relaxed mb-10 max-w-2xl"
           >
-            Depuis le centre de l'Afrique vers le monde. Solutions technologiques innovantes qui transforment les entreprises africaines.
+            Nous développons des plateformes web, applications mobiles et systèmes e-commerce pour les entreprises africaines. Fondé à Kinshasa en 2020.
           </motion.p>
 
           <motion.div
@@ -50,12 +50,12 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-6"
           >
             <a
-              href="#services"
+              href="#projects"
               className="group relative px-8 py-4 rounded-lg font-bold text-white overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:scale-110 transition-transform duration-300" />
               <div className="relative flex items-center justify-center gap-2">
-                Explorer l'Expérience
+                Voir nos projets
                 <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </div>
             </a>
@@ -64,7 +64,7 @@ export default function Hero() {
               href="#contact"
               className="px-8 py-4 rounded-lg font-bold text-white border border-orange-500/50 hover:border-orange-400 hover:bg-orange-500/10 transition-all duration-300"
             >
-              Nous Contacter
+              Discuter de votre projet
             </a>
           </motion.div>
         </motion.div>

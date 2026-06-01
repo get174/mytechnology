@@ -1,6 +1,5 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import About from './components/About';
@@ -9,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackgroundEffects from './components/BackgroundEffects';
 import CursorGlow from './components/CursorGlow';
+import Metrics from './components/Metrics';
 
 export default function App() {
   return (
@@ -18,9 +18,9 @@ export default function App() {
       <Header />
       <main className="relative z-10">
         <Hero />
-        <Experience />
         <Services />
         <Projects />
+        <Metrics />
         <About />
         <Testimonials />
         <Contact />

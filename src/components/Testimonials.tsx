@@ -76,18 +76,18 @@ export default function Testimonials() {
         >
           <div className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-6">
             <span className="text-orange-400 text-sm font-medium tracking-wider">
-              TÉMOIGNAGES
+              ILS NOUS FONT CONFIANCE
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Ce que Disent
+              Résultats réels
             </span>
             <br />
-            <span className="text-white">Nos Clients</span>
+            <span className="text-white">Clients satisfaits</span>
           </h2>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            La satisfaction de nos clients est notre plus grande récompense
+            Pas de discours. Des chiffres. Les résultats parlent d'eux-mêmes.
           </p>
         </motion.div>
 

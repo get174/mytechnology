@@ -4,23 +4,23 @@ import { useRef } from 'react';
 const timeline = [
   {
     year: '2020',
-    title: 'La Fondation',
-    description: 'MyTechnology est née avec une vision: transformer l\'Afrique par la technologie.',
+    title: 'Premier Code',
+    description: 'Premier projet livré: système de gestion pour un commerce à Kinshasa. Le client a augmenté ses ventes de 40%.',
   },
   {
     year: '2021',
-    title: 'Premier Projet',
-    description: 'Lancement de notre premier projet majeur pour une entreprise locale à Kinshasa.',
+    title: '20+ Clients',
+    description: 'Plateforme e-commerce pour AfroCommerce. 500+ commandes le premier mois.',
   },
   {
     year: '2022',
-    title: 'Expansion',
-    description: 'Expansion dans toute l\'Afrique centrale avec des projets pour plus de 20 clients.',
+    title: 'Équipe Locale',
+    description: '4 développeurs, 2 designers. Premier système bancaire digital en RDC.',
   },
   {
     year: '2024',
-    title: 'Excellence Mondiale',
-    description: 'Reconnaissance internationale et projets pour des clients à travers le monde.',
+    title: 'Scale',
+    description: '40+ projets livrés. Présence dans 5 pays africains. 2 millions USD de revenus clients générés.',
   },
 ];
 
@@ -77,7 +77,7 @@ export default function About() {
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              De Kinshasa vers le Futur
+              Conçu en Afrique, livré pour le monde
             </span>
           </h2>
         </motion.div>

@@ -6,32 +6,32 @@ import { useRef } from 'react';
 const services = [
   {
     icon: Code,
-    title: 'Développement Web',
-    description: 'Sites et applications web personnalisés avec les dernières technologies',
+    title: 'Plateformes Web',
+    description: 'E-commerce, tableaux de bord, portails clients. Technologies modernes, performance optimale.',
     color: 'from-orange-500 to-yellow-500',
   },
   {
     icon: Smartphone,
     title: 'Applications Mobiles',
-    description: 'Applications mobiles natives et multiplateformes pour iOS et Android',
+    description: 'iOS et Android. Interface intuitive, notifications push, integration payment mobile.',
     color: 'from-orange-600 to-orange-700',
   },
   {
     icon: Cpu,
-    title: 'Logiciels Personnalisés',
-    description: 'Solutions logicielles sur mesure adaptées à vos besoins métier',
+    title: 'Systèmes sur Mesure',
+    description: 'Logiciels de gestion: stock, comptabilité, RH. Automatisation des processus métier.',
     color: 'from-yellow-500 to-orange-500',
   },
   {
     icon: MessageCircle,
-    title: 'Automatisation WhatsApp',
-    description: 'Chatbots intelligents et automatisation pour engagement client',
+    title: 'WhatsApp Business',
+    description: 'Chatbots automatisés pour commandes, support et prise de rendez-vous 24/7.',
     color: 'from-green-500 to-emerald-500',
   },
   {
     icon: Shield,
-    title: 'Cybersécurité',
-    description: 'Solutions de sécurité complètes pour protéger vos actifs numériques',
+    title: 'Sécurité & Audit',
+    description: 'Pentests, audits de vulnérabilités, mise en conformité RGPD et protection des données clients.',
     color: 'from-red-500 to-orange-500',
   },
 ];
@@ -92,11 +92,11 @@ export default function Services() {
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Ce que Nous Faisons
+              Construisez votre advantage digitale
             </span>
           </h2>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Solutions technologiques complètes conçues pour propulser votre entreprise vers l'avenir
+            Des outils numériques qui generent des revenus. Chaque projet est conçu pour générer des résultats mesurables.
           </p>
         </motion.div>
 

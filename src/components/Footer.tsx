@@ -18,7 +18,7 @@ export default function Footer() {
               <img src="/assets/logo.jpg" alt="MyTechnology" className="h-10 w-auto" />
             </div>
             <p className="text-gray-400">
-              Transformons l'Afrique par la technologie, ensemble.
+              Développement web et mobile. Kinshasa, RDC.
             </p>
           </div>
 
