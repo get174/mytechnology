@@ -6,9 +6,18 @@ const projects = [
   {
     title: 'Exetat App',
     description: 'Plateforme de préparation aux examens d\'État en RDC avec ressources pédagogiques et simulations',
-    image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/exetatapp.jpg',
     tags: ['Next.js', 'PostgreSQL', 'TypeScript'],
     link: 'https://exetatapp.com',
+    year: 2025,
+  },
+  {
+    title: 'Glock Cleaner',
+    description: 'Application de nettoyage et optimisation système pour Windows avec interface moderne et intuitive',
+    image: '/assets/glockcleaner.png',
+    tags: ['C#', '.NET', 'Windows API'],
+    link: 'https://glockcleaner.com',
+    year: 2024,
   },
   {
     title: 'Plateforme E-Commerce Africaine',
@@ -82,7 +91,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       </div>
 
       <div className="absolute top-4 right-4 px-4 py-2 rounded-lg bg-gradient-to-r from-orange-600 to-orange-700 text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {2020 + index}
+        {project.year || (2020 + index)}
       </div>
     </motion.a>
   );
