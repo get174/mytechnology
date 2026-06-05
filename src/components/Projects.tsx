@@ -4,6 +4,13 @@ import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
+    title: 'Exetat App',
+    description: 'Plateforme de préparation aux examens d\'État en RDC avec ressources pédagogiques et simulations',
+    image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['Next.js', 'PostgreSQL', 'TypeScript'],
+    link: 'https://exetatapp.com',
+  },
+  {
     title: 'Plateforme E-Commerce Africaine',
     description: 'Solution complète de commerce électronique pour les petits commerçants',
     image: 'https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -34,12 +41,15 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <motion.div
-      ref={ref}
+    <motion.a
+      href={project.link || '#'}
+      target="_blank"
+      rel="noopener noreferrer"
+      ref={ref as never}
       initial={{ opacity: 0, x: 50 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group relative h-96 rounded-2xl overflow-hidden"
+      className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer block"
     >
       <img
         src={project.image}
@@ -67,14 +77,14 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         </div>
 
         <button className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors">
-          Voir plus <ArrowRight className="w-4 h-4" />
+          {project.link ? 'Visiter le site' : 'Voir plus'} <ArrowRight className="w-4 h-4" />
         </button>
       </div>
 
       <div className="absolute top-4 right-4 px-4 py-2 rounded-lg bg-gradient-to-r from-orange-600 to-orange-700 text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         {2020 + index}
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
 
