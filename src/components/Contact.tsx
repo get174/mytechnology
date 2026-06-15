@@ -21,7 +21,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const whatsappMessage = `Bonjour, je m'appelle ${formData.name}. Email: ${formData.email}. Message: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/243XXXXXXXXX?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/243800690026?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -76,7 +76,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">WhatsApp</h3>
-                  <p className="text-gray-400">+243 XXX XXX XXX</p>
+                  <p className="text-gray-400">+243 800 690 026</p>
                 </div>
               </div>
             </div>

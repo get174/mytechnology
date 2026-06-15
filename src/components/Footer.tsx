@@ -65,7 +65,7 @@ export default function Footer() {
       </div>
 
       <a
-        href="https://wa.me/243XXXXXXXXX"
+        href="https://wa.me/243800690026"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg shadow-green-500/50 z-50"
