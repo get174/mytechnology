@@ -27,9 +27,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold leading-[0.95] mb-6 tracking-[-0.04em]"
           >
-            Technology at
+            La technologie à
             <br />
-            <span className="gradient-text">Hand</span>
+            <span className="gradient-text">portée de main</span>
           </motion.h1>
 
           <motion.p
