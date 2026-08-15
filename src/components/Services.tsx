@@ -1,38 +1,44 @@
 import { motion } from 'framer-motion';
-import { Code, Smartphone, Cpu, MessageCircle, Shield } from 'lucide-react';
+import { Code, Cpu, MessageSquareText, ShieldCheck, Sparkles, Smartphone } from 'lucide-react';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const services = [
   {
+    icon: Sparkles,
+    title: 'GlockCleaner',
+    description: 'Nettoyez, optimisez et améliorez les performances de votre PC.',
+    color: 'from-[#1E5BFF] to-[#123FC4]',
+  },
+  {
     icon: Code,
     title: 'Plateformes Web',
-    description: 'E-commerce, tableaux de bord, portails clients. Technologies modernes, performance optimale.',
-    color: 'from-orange-500 to-yellow-500',
+    description: 'Sites vitrine, solutions SaaS et dashboards premium conçus pour convertir et rassurer.',
+    color: 'from-[#3a73ff] to-[#123fc4]',
   },
   {
     icon: Smartphone,
     title: 'Applications Mobiles',
-    description: 'iOS et Android. Interface intuitive, notifications push, integration payment mobile.',
-    color: 'from-orange-600 to-orange-700',
+    description: 'Expérience fluide sur iOS et Android, pensée pour la simplicité et la performance.',
+    color: 'from-[#7aa5ff] to-[#1e5bff]',
   },
   {
     icon: Cpu,
     title: 'Systèmes sur Mesure',
-    description: 'Logiciels de gestion: stock, comptabilité, RH. Automatisation des processus métier.',
-    color: 'from-yellow-500 to-orange-500',
+    description: 'Logiciels de gestion complet, automatisation, reporting et optimisation des processus.',
+    color: 'from-[#4d7eff] to-[#123fc4]',
   },
   {
-    icon: MessageCircle,
+    icon: MessageSquareText,
     title: 'WhatsApp Business',
-    description: 'Chatbots automatisés pour commandes, support et prise de rendez-vous 24/7.',
-    color: 'from-green-500 to-emerald-500',
+    description: 'Automatisation intelligente du service client et de la relation commerciale 24/7.',
+    color: 'from-[#6d8cff] to-[#1e5bff]',
   },
   {
-    icon: Shield,
+    icon: ShieldCheck,
     title: 'Sécurité & Audit',
-    description: 'Pentests, audits de vulnérabilités, mise en conformité RGPD et protection des données clients.',
-    color: 'from-red-500 to-orange-500',
+    description: 'Protection des données, audits de sécurité et conformité pour une fiabilité maximum.',
+    color: 'from-[#8ca8ff] to-[#3d66da]',
   },
 ];
 
@@ -48,24 +54,24 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group relative"
     >
-      <div className="relative h-full p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-orange-500/5 group-hover:via-orange-500/5 group-hover:to-yellow-500/5 transition-all duration-500" />
+      <div className="relative h-full p-8 rounded-[28px] border border-white/10 bg-gradient-to-br from-[#0a162b] to-[#07142f] overflow-hidden transition-all duration-500 hover:border-blue-400/40 hover:shadow-[0_20px_60px_rgba(18,63,196,0.18)] hover:scale-[1.02]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(30,91,255,0.16),_transparent_30%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         <div className="relative z-10">
-          <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${service.color} mb-6 group-hover:scale-110 transition-transform duration-500`}>
+          <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg shadow-blue-800/25`}>
             <service.icon className="w-8 h-8 text-white" />
           </div>
 
-          <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-yellow-400 group-hover:bg-clip-text transition-all duration-300">
+          <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-200 transition-colors duration-300">
             {service.title}
           </h3>
 
-          <p className="text-gray-400 leading-relaxed">
+          <p className="text-slate-300 leading-relaxed">
             {service.description}
           </p>
         </div>
 
-        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-to-br from-blue-500/15 to-cyan-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
     </motion.div>
   );
@@ -85,18 +91,16 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-6">
-            <span className="text-orange-400 text-sm font-medium tracking-wider">
-              NOS SERVICES
+          <div className="inline-block px-6 py-2 rounded-full border border-blue-400/25 bg-blue-500/10 mb-6">
+            <span className="text-blue-200 text-sm font-medium tracking-[0.2em] uppercase">
+              Nos solutions
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Construisez votre advantage digitale
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-[-0.04em]">
+            <span className="gradient-text">Technologie au service de vos performances</span>
           </h2>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Des outils numériques qui generent des revenus. Chaque projet est conçu pour générer des résultats mesurables.
+          <p className="text-slate-300 text-xl max-w-3xl mx-auto">
+            Des solutions conçues pour simplifier les usages, protéger les données et accélérer les résultats.
           </p>
         </motion.div>
 

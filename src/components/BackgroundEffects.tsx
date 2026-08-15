@@ -93,22 +93,20 @@ export default function BackgroundEffects() {
     const animate = () => {
       time += 0.005;
 
-      // Dark background with minimal fade for cleaner look
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+      // Dark premium background with subtle blue glow
+      ctx.fillStyle = 'rgba(3, 8, 20, 0.15)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Subtle radial glow from center (very subtle, won't interfere with text)
       const centerGlow = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
-      centerGlow.addColorStop(0, 'rgba(249, 115, 22, 0.04)');
-      centerGlow.addColorStop(0.5, 'rgba(249, 115, 22, 0.02)');
+      centerGlow.addColorStop(0, 'rgba(30, 91, 255, 0.06)');
+      centerGlow.addColorStop(0.5, 'rgba(18, 63, 196, 0.03)');
       centerGlow.addColorStop(1, 'rgba(0, 0, 0, 0)');
       ctx.fillStyle = centerGlow;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Draw all connections first (below nodes)
       nodes.forEach((node, i) => {
         node.pulse += node.pulseSpeed;
 
@@ -116,11 +114,10 @@ export default function BackgroundEffects() {
           const other = nodes[j];
           if (!other) return;
 
-          // Connection line with subtle gradient
           const gradient = ctx.createLinearGradient(node.x, node.y, other.x, other.y);
-          gradient.addColorStop(0, hexToRgba('#f97316', 0.08));
-          gradient.addColorStop(0.5, hexToRgba('#f97316', 0.15));
-          gradient.addColorStop(1, hexToRgba('#f97316', 0.08));
+          gradient.addColorStop(0, hexToRgba('#1E5BFF', 0.08));
+          gradient.addColorStop(0.5, hexToRgba('#123FC4', 0.15));
+          gradient.addColorStop(1, hexToRgba('#1E5BFF', 0.08));
 
           ctx.beginPath();
           ctx.moveTo(node.x, node.y);
@@ -129,17 +126,15 @@ export default function BackgroundEffects() {
           ctx.lineWidth = 1;
           ctx.stroke();
 
-          // Draw circuit trace pattern on connection
           const midX = (node.x + other.x) / 2;
           const midY = (node.y + other.y) / 2;
           ctx.beginPath();
           ctx.arc(midX, midY, 2, 0, Math.PI * 2);
-          ctx.fillStyle = hexToRgba('#f97316', 0.2);
+          ctx.fillStyle = hexToRgba('#1E5BFF', 0.2);
           ctx.fill();
         });
       });
 
-      // Draw and update nodes
       nodes.forEach((node) => {
         node.x += node.vx;
         node.y += node.vy;
@@ -149,29 +144,25 @@ export default function BackgroundEffects() {
 
         const pulseSize = node.size + Math.sin(node.pulse) * 0.8;
 
-        // Node glow
         const glow = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, pulseSize * 3);
-        glow.addColorStop(0, hexToRgba('#f97316', 0.25));
+        glow.addColorStop(0, hexToRgba('#1E5BFF', 0.18));
         glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
         ctx.beginPath();
         ctx.arc(node.x, node.y, pulseSize * 3, 0, Math.PI * 2);
         ctx.fillStyle = glow;
         ctx.fill();
 
-        // Node core
         ctx.beginPath();
         ctx.arc(node.x, node.y, pulseSize, 0, Math.PI * 2);
-        ctx.fillStyle = '#f97316';
+        ctx.fillStyle = '#1E5BFF';
         ctx.fill();
 
-        // Node inner bright spot
         ctx.beginPath();
-        ctx.arc(node.x, node.y, pulseSize * 0.4, 0, Math.PI * 2);
-        ctx.fillStyle = '#fbbf24';
+        ctx.arc(node.x, node.y, pulseSize * 0.38, 0, Math.PI * 2);
+        ctx.fillStyle = '#C9D8FF';
         ctx.fill();
       });
 
-      // Draw data packets
       packets.forEach((packet) => {
         if (!packet.active || nodes.length === 0) return;
 
@@ -189,30 +180,27 @@ export default function BackgroundEffects() {
         const x = fromNode.x + (toNode.x - fromNode.x) * packet.progress;
         const y = fromNode.y + (toNode.y - fromNode.y) * packet.progress;
 
-        // Packet glow trail
         const packetGlow = ctx.createRadialGradient(x, y, 0, x, y, 15);
-        packetGlow.addColorStop(0, hexToRgba('#fbbf24', 0.6));
-        packetGlow.addColorStop(0.5, hexToRgba('#f97316', 0.3));
+        packetGlow.addColorStop(0, hexToRgba('#DDE8FF', 0.6));
+        packetGlow.addColorStop(0.5, hexToRgba('#1E5BFF', 0.35));
         packetGlow.addColorStop(1, 'rgba(0, 0, 0, 0)');
         ctx.beginPath();
         ctx.arc(x, y, 15, 0, Math.PI * 2);
         ctx.fillStyle = packetGlow;
         ctx.fill();
 
-        // Packet core
         ctx.beginPath();
         ctx.arc(x, y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = '#fbbf24';
+        ctx.fillStyle = '#DDE8FF';
         ctx.fill();
       });
 
-      // Add some binary/data text effect (very subtle)
       if (Math.random() < 0.01) {
         ctx.font = '10px monospace';
         const binary = Math.random() > 0.5 ?
           Array(8).fill(0).map(() => Math.floor(Math.random() * 2)).join('') :
           Array(6).fill(0).map(() => String.fromCharCode(65 + Math.floor(Math.random() * 26))).join('');
-        ctx.fillStyle = hexToRgba('#f97316', 0.15);
+        ctx.fillStyle = hexToRgba('#1E5BFF', 0.15);
         ctx.fillText(binary, Math.random() * canvas.width, Math.random() * canvas.height);
       }
 

@@ -33,27 +33,27 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.2 }}
-      className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-orange-500/20 backdrop-blur-sm"
+      className="relative p-8 rounded-[28px] border border-white/10 bg-gradient-to-br from-[#0a152b] to-[#07142f]"
     >
-      <Quote className="absolute top-4 right-4 w-8 h-8 text-orange-500/20" />
+      <Quote className="absolute top-4 right-4 w-8 h-8 text-blue-500/20" />
 
       <div className="flex gap-1 mb-4">
         {[...Array(testimonial.rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+          <Star key={i} className="w-5 h-5 text-[#F6C453] fill-[#F6C453]" />
         ))}
       </div>
 
-      <p className="text-gray-300 text-lg leading-relaxed mb-6 italic">
-        "{testimonial.content}"
+      <p className="text-slate-200 text-lg leading-relaxed mb-6 italic">
+        “{testimonial.content}”
       </p>
 
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold text-lg">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#123fc4] to-[#1e5bff] flex items-center justify-center text-white font-bold text-lg">
           {testimonial.name.charAt(0)}
         </div>
         <div>
           <h4 className="text-white font-bold">{testimonial.name}</h4>
-          <p className="text-gray-400 text-sm">{testimonial.role}</p>
+          <p className="text-slate-400 text-sm">{testimonial.role}</p>
         </div>
       </div>
     </motion.div>
@@ -65,7 +65,7 @@ export default function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="testimonials" className="relative py-32 px-4 bg-gradient-to-b from-black via-gray-950 to-black">
+    <section id="testimonials" className="relative py-32 px-4 bg-gradient-to-b from-[#030814] via-[#07142f] to-[#030814]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -74,20 +74,18 @@ export default function Testimonials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-6">
-            <span className="text-orange-400 text-sm font-medium tracking-wider">
-              ILS NOUS FONT CONFIANCE
+          <div className="inline-block px-6 py-2 rounded-full border border-blue-400/25 bg-blue-500/10 mb-6">
+            <span className="text-blue-200 text-sm font-medium tracking-[0.2em] uppercase">
+              Ils nous font confiance
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Résultats réels
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-[-0.04em]">
+            <span className="gradient-text">Résultats réels</span>
             <br />
             <span className="text-white">Clients satisfaits</span>
           </h2>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Pas de discours. Des chiffres. Les résultats parlent d'eux-mêmes.
+          <p className="text-slate-300 text-xl max-w-3xl mx-auto">
+            Une exécution sérieuse, une communication claire et des solutions qui tiennent leurs promesses.
           </p>
         </motion.div>
 

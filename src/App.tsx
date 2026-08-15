@@ -12,7 +12,7 @@ import Metrics from './components/Metrics';
 
 export default function App() {
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+    <div className="bg-[#030814] text-white overflow-x-hidden">
       <BackgroundEffects />
       <CursorGlow />
       <Header />

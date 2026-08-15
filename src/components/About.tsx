@@ -5,22 +5,22 @@ const timeline = [
   {
     year: '2020',
     title: 'Premier Code',
-    description: 'Premier projet livré: système de gestion pour un commerce à Kinshasa. Le client a augmenté ses ventes de 40%.',
+    description: 'Nous avons lancé nos premiers projets en mettant l’expérience utilisateur et la fiabilité au centre de chaque solution.',
   },
   {
     year: '2021',
     title: '20+ Clients',
-    description: 'Plateforme e-commerce pour AfroCommerce. 500+ commandes le premier mois.',
+    description: 'Nous avons accompagné des entreprises avec des plateformes performantes et des outils de gestion adaptés à leurs besoins.',
   },
   {
     year: '2022',
     title: 'Équipe Locale',
-    description: '4 développeurs, 2 designers. Premier système bancaire digital en RDC.',
+    description: 'Une équipe de passionnés a renforcé notre capacité à concevoir des systèmes fiables, sécurisés et scalables.',
   },
   {
     year: '2024',
     title: 'Scale',
-    description: '40+ projets livrés. Présence dans 5 pays africains. 2 millions USD de revenus clients générés.',
+    description: 'MyTech a désormais une présence solide dans plusieurs marchés africains avec des produits pensés pour durer.',
   },
 ];
 
@@ -37,17 +37,17 @@ function TimelineItem({ item, index }: { item: typeof timeline[0]; index: number
       className={`flex gap-8 mb-12 items-center ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}
     >
       <div className="flex-1">
-        <div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
-          <div className="text-orange-400 text-sm font-bold mb-2">{item.year}</div>
+        <div className="p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-[#081a31] to-[#0a152b]">
+          <div className="text-blue-300 text-sm font-bold mb-2">{item.year}</div>
           <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
-          <p className="text-gray-400">{item.description}</p>
+          <p className="text-slate-300">{item.description}</p>
         </div>
       </div>
 
       <div className="relative flex flex-col items-center">
-        <div className="w-4 h-4 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 relative z-10" />
+        <div className="w-4 h-4 rounded-full bg-gradient-to-r from-[#1E5BFF] to-[#123FC4] relative z-10" />
         {index < timeline.length - 1 && (
-          <div className="w-1 h-24 bg-gradient-to-b from-orange-500 to-transparent mt-2" />
+          <div className="w-1 h-24 bg-gradient-to-b from-[#1E5BFF] to-transparent mt-2" />
         )}
       </div>
 
@@ -70,15 +70,13 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-6">
-            <span className="text-orange-400 text-sm font-medium tracking-wider">
-              NOTRE HISTOIRE
+          <div className="inline-block px-6 py-2 rounded-full border border-blue-400/25 bg-blue-500/10 mb-6">
+            <span className="text-blue-200 text-sm font-medium tracking-[0.2em] uppercase">
+              Notre histoire
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Conçu en Afrique, livré pour le monde
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-[-0.04em]">
+            <span className="gradient-text">Conçu en Afrique, pensé pour le monde</span>
           </h2>
         </motion.div>
 

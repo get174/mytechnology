@@ -3,8 +3,10 @@ import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 px-4">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(30,91,255,0.2),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(18,63,196,0.18),_transparent_30%)]" />
+
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -14,57 +16,50 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-8"
+            className="inline-flex items-center px-4 py-2 rounded-full border border-blue-400/25 bg-blue-500/10 text-blue-200 text-xs font-medium tracking-[0.18em] uppercase mb-8"
           >
-            <span className="text-orange-400 text-sm font-medium tracking-wider uppercase">
-              My Technology — Kinshasa, RDC
-            </span>
+            MyTech • Innovation & protection
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold leading-tight mb-6"
+            className="text-5xl md:text-7xl font-bold leading-[0.95] mb-6 tracking-[-0.04em]"
           >
-            Logiciels qui
+            Technology at
             <br />
-            <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
-              génèrent des revenus
-            </span>
+            <span className="gradient-text">Hand</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-gray-300 text-xl leading-relaxed mb-10 max-w-2xl"
+            className="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
           >
-            Nous développons des plateformes web, applications mobiles et systèmes e-commerce pour les entreprises africaines. Fondé à Kinshasa en 2020.
+            MyTech conçoit des solutions technologiques modernes pour simplifier, protéger et améliorer votre quotidien numérique.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6"
+            className="flex flex-col sm:flex-row gap-4"
           >
             <a
-              href="#projects"
-              className="group relative px-8 py-4 rounded-lg font-bold text-white overflow-hidden"
+              href="#services"
+              className="premium-button inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-white"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:scale-110 transition-transform duration-300" />
-              <div className="relative flex items-center justify-center gap-2">
-                Voir nos projets
-                <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-              </div>
+              Découvrir nos solutions
+              <ChevronDown className="w-5 h-5 rotate-[-90deg]" />
             </a>
 
             <a
               href="#contact"
-              className="px-8 py-4 rounded-lg font-bold text-white border border-orange-500/50 hover:border-orange-400 hover:bg-orange-500/10 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-white border border-blue-400/25 bg-white/5 hover:border-blue-300/40 hover:bg-blue-500/10 transition-all duration-300"
             >
-              Discuter de votre projet
+              Nous contacter
             </a>
           </motion.div>
         </motion.div>
@@ -73,78 +68,70 @@ export default function Hero() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="hidden md:block relative"
+          className="relative"
         >
-          <div className="relative h-96 rounded-2xl overflow-hidden border border-orange-500/30 backdrop-blur-sm bg-gradient-to-br from-gray-900 to-black p-8">
-            <svg className="w-full h-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Background grid */}
+          <div className="relative h-[480px] rounded-[32px] border border-blue-400/20 bg-gradient-to-br from-[#0b1733] via-[#08142d] to-[#050d1d] p-8 soft-shadow overflow-hidden">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(124,141,175,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(124,141,175,0.08)_1px,transparent_1px)] bg-[size:30px_30px]" />
+            <div className="absolute -top-20 right-0 w-72 h-72 rounded-full bg-blue-500/20 blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#123fc4]/20 blur-3xl" />
+
+            <svg className="relative w-full h-full" viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(249,115,22,0.1)" strokeWidth="1"/>
+                <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+                  <path d="M 36 0 L 0 0 0 36" fill="none" stroke="rgba(124,141,175,0.18)" strokeWidth="1"/>
                 </pattern>
-                <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#f97316"/>
-                  <stop offset="100%" stopColor="#fbbf24"/>
+                <linearGradient id="techBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#1E5BFF"/>
+                  <stop offset="100%" stopColor="#123FC4"/>
                 </linearGradient>
               </defs>
-              <rect width="400" height="300" fill="url(#grid)"/>
 
-              {/* Central server/tech node */}
-              <motion.circle cx="200" cy="150" r="40" fill="none" stroke="url(#orangeGrad)" strokeWidth="2"
-                animate={{ r: [40, 45, 40], opacity: [1, 0.5, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}/>
-              <motion.circle cx="200" cy="150" r="30" fill="rgba(249,115,22,0.2)" stroke="#f97316" strokeWidth="1"
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}/>
-              <text x="200" y="155" textAnchor="middle" fill="#f97316" fontSize="20" fontWeight="bold">&lt;/&gt;</text>
+              <rect width="420" height="300" fill="url(#grid)" rx="20" />
 
-              {/* Orbiting elements */}
-              <motion.circle cx="280" cy="100" r="8" fill="#f97316"
-                animate={{ cx: [280, 300, 280], cy: [100, 80, 100] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
-              <motion.circle cx="120" cy="200" r="6" fill="#fbbf24"
-                animate={{ cx: [120, 100, 120], cy: [200, 220, 200] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}/>
-              <motion.circle cx="300" cy="220" r="10" fill="#f97316"
-                animate={{ cx: [300, 320, 300], cy: [220, 240, 220] }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}/>
-              <motion.circle cx="100" cy="80" r="5" fill="#fbbf24"
-                animate={{ cx: [100, 80, 100], cy: [80, 60, 80] }}
-                transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}/>
+              <motion.circle cx="210" cy="150" r="52" fill="none" stroke="url(#techBlue)" strokeWidth="2.5"
+                animate={{ r: [52, 58, 52], opacity: [1, 0.7, 1] }}
+                transition={{ duration: 2.8, repeat: Infinity }} />
+              <motion.circle cx="210" cy="150" r="36" fill="rgba(30,91,255,0.14)" stroke="#1E5BFF" strokeWidth="1.5"
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{ duration: 2.8, repeat: Infinity }} />
+              <text x="210" y="158" textAnchor="middle" fill="#DDE8FF" fontSize="22" fontWeight="700">&lt;/&gt;</text>
 
-              {/* Connection lines */}
-              <motion.line x1="200" y1="150" x2="280" y2="100" stroke="#f97316" strokeWidth="1" strokeOpacity="0.3"
-                animate={{ strokeOpacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 1.5, repeat: Infinity }}/>
-              <motion.line x1="200" y1="150" x2="120" y2="200" stroke="#f97316" strokeWidth="1" strokeOpacity="0.3"
-                animate={{ strokeOpacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}/>
-              <motion.line x1="200" y1="150" x2="300" y2="220" stroke="#f97316" strokeWidth="1" strokeOpacity="0.3"
-                animate={{ strokeOpacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}/>
-              <motion.line x1="200" y1="150" x2="100" y2="80" stroke="#f97316" strokeWidth="1" strokeOpacity="0.3"
-                animate={{ strokeOpacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}/>
+              <motion.circle cx="298" cy="88" r="9" fill="#1E5BFF"
+                animate={{ cx: [298, 320, 298], cy: [88, 72, 88] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }} />
+              <motion.circle cx="110" cy="212" r="7" fill="#8FA7FF"
+                animate={{ cx: [110, 95, 110], cy: [212, 228, 212] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }} />
+              <motion.circle cx="326" cy="214" r="11" fill="#123FC4"
+                animate={{ cx: [326, 344, 326], cy: [214, 236, 214] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }} />
+              <motion.circle cx="90" cy="98" r="6" fill="#BACBFF"
+                animate={{ cx: [90, 72, 90], cy: [98, 78, 98] }}
+                transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }} />
 
-              {/* Floating code brackets */}
-              <motion.text x="50" y="150" fill="#f97316" fontSize="24" fontFamily="monospace" opacity="0.5"
-                animate={{ x: [50, 60, 50], opacity: [0.5, 0.8, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity }}>{'{'}</motion.text>
-              <motion.text x="340" y="150" fill="#f97316" fontSize="24" fontFamily="monospace" opacity="0.5"
-                animate={{ x: [340, 330, 340], opacity: [0.5, 0.8, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity }}>{'}'}</motion.text>
+              <motion.line x1="210" y1="150" x2="298" y2="88" stroke="#1E5BFF" strokeWidth="1.5" strokeOpacity="0.35"
+                animate={{ strokeOpacity: [0.3, 0.7, 0.3] }} transition={{ duration: 1.8, repeat: Infinity }} />
+              <motion.line x1="210" y1="150" x2="110" y2="212" stroke="#1E5BFF" strokeWidth="1.5" strokeOpacity="0.3"
+                animate={{ strokeOpacity: [0.3, 0.7, 0.3] }} transition={{ duration: 1.8, repeat: Infinity, delay: 0.2 }} />
+              <motion.line x1="210" y1="150" x2="326" y2="214" stroke="#1E5BFF" strokeWidth="1.5" strokeOpacity="0.3"
+                animate={{ strokeOpacity: [0.3, 0.7, 0.3] }} transition={{ duration: 1.8, repeat: Infinity, delay: 0.4 }} />
+              <motion.line x1="210" y1="150" x2="90" y2="98" stroke="#1E5BFF" strokeWidth="1.5" strokeOpacity="0.3"
+                animate={{ strokeOpacity: [0.3, 0.7, 0.3] }} transition={{ duration: 1.8, repeat: Infinity, delay: 0.6 }} />
 
-              {/* Bottom tech waves */}
-              <motion.path d="M0 280 Q50 260 100 280 T200 280 T300 280 T400 280" fill="none" stroke="#f97316" strokeWidth="2" strokeOpacity="0.2"
-                animate={{ d: ["M0 280 Q50 260 100 280 T200 280 T300 280 T400 280", "M0 280 Q50 300 100 280 T200 280 T300 280 T400 280"] }}
-                transition={{ duration: 3, repeat: Infinity }}/>
+              <motion.text x="50" y="160" fill="#8FA7FF" fontSize="26" fontFamily="monospace" opacity="0.6"
+                animate={{ x: [50, 62, 50], opacity: [0.45, 0.8, 0.45] }} transition={{ duration: 3.2, repeat: Infinity }}>{'{'}</motion.text>
+              <motion.text x="342" y="160" fill="#8FA7FF" fontSize="26" fontFamily="monospace" opacity="0.6"
+                animate={{ x: [342, 332, 342], opacity: [0.45, 0.8, 0.45] }} transition={{ duration: 3.2, repeat: Infinity }}>{'}'}</motion.text>
+
+              <motion.path d="M0 252 Q90 220 170 252 T330 252 T420 252" fill="none" stroke="#1E5BFF" strokeWidth="2" strokeOpacity="0.2"
+                animate={{ d: ['M0 252 Q90 220 170 252 T330 252 T420 252', 'M0 252 Q90 270 170 252 T330 252 T420 252'] }} transition={{ duration: 3, repeat: Infinity }} />
             </svg>
           </div>
 
           <motion.div
-            animate={{ y: [0, -20, 0] }}
+            animate={{ y: [0, -18, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
-            className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-to-br from-orange-500/30 to-yellow-500/30 rounded-full blur-3xl"
+            className="absolute -bottom-10 -right-8 w-44 h-44 rounded-full bg-gradient-to-br from-blue-500/25 to-[#123fc4]/20 blur-3xl"
           />
         </motion.div>
       </div>
@@ -152,9 +139,9 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <ChevronDown className="w-6 h-6 text-orange-400" />
+        <ChevronDown className="w-6 h-6 text-blue-300" />
       </motion.div>
     </section>
   );

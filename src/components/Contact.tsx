@@ -35,18 +35,16 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-6 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm mb-6">
-            <span className="text-orange-400 text-sm font-medium tracking-wider">
-              CONTACTEZ-NOUS
+          <div className="inline-block px-6 py-2 rounded-full border border-blue-400/25 bg-blue-500/10 mb-6">
+            <span className="text-blue-200 text-sm font-medium tracking-[0.2em] uppercase">
+              Contact
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Parlons de votre projet
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-[-0.04em]">
+            <span className="gradient-text">Parlons de votre projet</span>
           </h2>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Décrivez votre projet. Nous répondons sous 24h avec une estimation.
+          <p className="text-slate-300 text-xl max-w-3xl mx-auto">
+            Décrivez votre besoin. Nous vous répondrons rapidement avec une solution adaptée.
           </p>
         </motion.div>
 
@@ -57,38 +55,38 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-8"
           >
-            <div className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300">
+            <div className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-[#0a152b] to-[#07142f] hover:border-blue-400/35 transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-gradient-to-br from-orange-600 to-orange-700 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-[#123fc4] to-[#1e5bff] group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                  <p className="text-gray-400">contact@mytechnology.cd</p>
+                  <p className="text-slate-300">contact@mytechnology.cd</p>
                 </div>
               </div>
             </div>
 
-            <div className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300">
+            <div className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-[#0a152b] to-[#07142f] hover:border-blue-400/35 transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-gradient-to-br from-orange-600 to-orange-700 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-[#123fc4] to-[#1e5bff] group-hover:scale-110 transition-transform duration-300">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">WhatsApp</h3>
-                  <p className="text-gray-400">+243 800 690 026</p>
+                  <p className="text-slate-300">+243 800 690 026</p>
                 </div>
               </div>
             </div>
 
-            <div className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300">
+            <div className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-[#0a152b] to-[#07142f] hover:border-blue-400/35 transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-gradient-to-br from-orange-600 to-orange-700 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-[#123fc4] to-[#1e5bff] group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Localisation</h3>
-                  <p className="text-gray-400">Kinshasa, République Démocratique du Congo</p>
+                  <p className="text-slate-300">Kinshasa, République Démocratique du Congo</p>
                 </div>
               </div>
             </div>
@@ -109,7 +107,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 rounded-xl bg-gray-900/50 border border-gray-700/50 backdrop-blur-sm text-white placeholder-gray-500 focus:border-orange-500/50 focus:outline-none transition-all duration-300"
+                className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-[#0c172b] text-white placeholder-slate-400 focus:border-blue-400/40 focus:outline-none transition-all duration-300"
               />
             </div>
 
@@ -121,7 +119,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 rounded-xl bg-gray-900/50 border border-gray-700/50 backdrop-blur-sm text-white placeholder-gray-500 focus:border-orange-500/50 focus:outline-none transition-all duration-300"
+                className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-[#0c172b] text-white placeholder-slate-400 focus:border-blue-400/40 focus:outline-none transition-all duration-300"
               />
             </div>
 
@@ -133,21 +131,20 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 rounded-xl bg-gray-900/50 border border-gray-700/50 backdrop-blur-sm text-white placeholder-gray-500 focus:border-orange-500/50 focus:outline-none transition-all duration-300 resize-none"
+                className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-[#0c172b] text-white placeholder-slate-400 focus:border-blue-400/40 focus:outline-none transition-all duration-300 resize-none"
               />
             </div>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               type="submit"
-              className="w-full group relative px-8 py-4 rounded-lg font-bold text-white overflow-hidden"
+              className="w-full premium-button px-8 py-4 rounded-full font-semibold text-white"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:scale-110 transition-transform duration-300" />
-              <div className="relative flex items-center justify-center gap-2">
+              <span className="flex items-center justify-center gap-2">
                 Envoyer sur WhatsApp
                 <Send className="w-5 h-5" />
-              </div>
+              </span>
             </motion.button>
           </motion.form>
         </div>
