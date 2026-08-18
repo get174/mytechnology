@@ -18,7 +18,7 @@ export default function Footer() {
               <img src="/assets/logo.jpg" alt="MyTech" className="h-10 w-auto" />
             </div>
             <p className="text-slate-300">
-              Technology at Hand. Solutions modernes pour un quotidien numérique plus simple et plus sûr.
+              La technologie à portée de main. Solutions modernes pour un quotidien numérique plus simple et plus sûr.
             </p>
           </div>
 
